@@ -54,6 +54,14 @@
     UIBarButtonItem *leftBttn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"259-list.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showDrawer:)];
     return leftBttn;
 }
+- (void)setParentView:(UINavigationController *)parentView{
+    UIPanGestureRecognizer *swipeRight = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drawerDidDrag:)];
+    swipeRight.delegate = self;
+    _parentView = parentView;
+    [_parentView.view addGestureRecognizer:swipeRight];
+    [_parentView.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    [_parentView.view insertSubview:self atIndex:0];
+}
 - (IBAction)showDrawer:(id)sender{
     if (!isVisible && ![sender isKindOfClass:[UIApplication class]]){
         [UIView animateWithDuration:.5 animations:^{
