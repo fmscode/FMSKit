@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FMSKit"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Collection of helpful categories and classes for iOS app development"
   s.description      = <<-DESC
                         A set of helpful objective C categories and a handful of classes. Includes FMSDrawer a drawer UI element. View
