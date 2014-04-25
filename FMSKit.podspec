@@ -16,5 +16,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'ios/*.{h,m}'
+  s.resources = 'Assets/*'
 
 end
