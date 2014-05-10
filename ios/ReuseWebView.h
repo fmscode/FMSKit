@@ -12,7 +12,7 @@
 
 - (id)initWithURL:(NSURL *)url;
 
-@property (nonatomic,assign)NSURL *webURL;
-@property (nonatomic,assign)NSString *webTitle;
+@property (nonatomic)NSURL *webURL;
+@property (nonatomic)NSString *webTitle;
 
 @end
