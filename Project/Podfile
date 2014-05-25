@@ -1,7 +1,1 @@
 pod "FMSKit", :path => "../FMSKit.podspec"
-
-target "Demo" do
-end
-
-target "DemoTests" do
-end
