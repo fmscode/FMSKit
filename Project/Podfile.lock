@@ -1,5 +1,5 @@
 PODS:
-  - FMSKit (0.3.2)
+  - FMSKit (0.3.3)
 
 DEPENDENCIES:
   - FMSKit (from `../FMSKit.podspec`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../FMSKit.podspec
 
 SPEC CHECKSUMS:
-  FMSKit: 1d6f92a467facd4da7232eece5fd629eebd46cee
+  FMSKit: fe12bbd6ede96401e6c9456435f0669a50e5eec5
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1
