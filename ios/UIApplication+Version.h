@@ -9,9 +9,9 @@
 
 @interface UIApplication (Version)
 
-// Pulls the current version of the application using the info.plist file.
+// Current version of the application from info.plist
 + (NSString *)version;
-// Pulls current version of build of the application using the info.plist file.
+// Current build number of the application from info.plist
 + (NSString *)build;
 
 @end

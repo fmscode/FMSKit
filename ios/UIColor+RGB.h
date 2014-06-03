@@ -8,5 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (RGB)
+
 + (UIColor *)colorUsingRed:(CGFloat)red green:(CGFloat)green andBlue:(CGFloat)blue;
+
 @end
