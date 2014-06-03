@@ -63,9 +63,13 @@
     self.navigationItem.leftBarButtonItem = cancelAction;
     self.navigationItem.rightBarButtonItem = saveAction;
     self.navigationItem.title = _editorTitle;
+    textView.text = _textContent;
 }
 - (void)setEditorTitle:(NSString *)editorTitle{
     _editorTitle = editorTitle;
+}
+- (void)setTextContent:(NSString *)textContent{
+    _textContent = textContent;
 }
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
