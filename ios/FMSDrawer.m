@@ -158,10 +158,10 @@
     return [_dataSource numberOfSections];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_dataSource numberOfRowsForSection:section];
+    return [_dataSource numberOfRowsForDrawer:section];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return [_dataSource titleForHeaderInSection:section];
+    return [_dataSource titleForDrawerHeaderInSection:section];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"MyCell";
@@ -170,13 +170,13 @@
     if (!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [_dataSource titleForRow:indexPath];
+    cell.textLabel.text = [_dataSource titleForDrawerRow:indexPath];
 
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [_delegate selectedItemAtIndexPath:indexPath];
+    [_delegate selectedDrawerAtIndexPath:indexPath];
     [self showDrawer:Nil];
 }
 
