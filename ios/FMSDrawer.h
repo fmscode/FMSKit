@@ -17,19 +17,18 @@
 @property (nonatomic,strong) id <DrawerDelegate> delegate;
 + (id)sharedInstance;
 - (void)reloadTable;
-- (BOOL)isVisible;
 - (UIBarButtonItem *)navigationButton;
 - (IBAction)drawerDidDrag:(UIPanGestureRecognizer *)sender;
 @end
 
 @protocol DrawerDataSource <NSObject>
 - (NSInteger)numberOfSections;
-- (NSInteger)numberOfRowsForSection:(NSInteger)section;
-- (NSString *)titleForRow:(NSIndexPath *)path;
+- (NSInteger)numberOfRowsForDrawer:(NSInteger)section;
+- (NSString *)titleForDrawerRow:(NSIndexPath *)path;
 @optional
-- (NSString *)titleForHeaderInSection:(NSInteger)section;
+- (NSString *)titleForDrawerHeaderInSection:(NSInteger)section;
 @end
 
 @protocol DrawerDelegate <NSObject>
-- (void)selectedItemAtIndexPath:(NSIndexPath *)path;
+- (void)selectedDrawerAtIndexPath:(NSIndexPath *)path;
 @end
