@@ -33,7 +33,7 @@
 - (id)initWithURL:(NSURL *)url{
     self = [super init];;
     if (self){
-        _webURL = url;
+        self.webURL = url;
     }
     return self;
 }
@@ -99,6 +99,7 @@
     // Do any additional setup after loading the view.
     [self setupClass];
     self.navigationItem.title = _webTitle;
+    NSLog(@"%@",self.webURL);
     [mainWebView loadRequest:[NSURLRequest requestWithURL:_webURL]];
 }
 - (void)didReceiveMemoryWarning{
